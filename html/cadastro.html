@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_blank" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary":"#ffffff","on-surface":"#0b1c30","outline-variant":"#c3c6d7","surface":"#f8f9ff","tertiary":"#943700","on-tertiary-fixed":"#360f00","tertiary-fixed-dim":"#ffb596","on-tertiary":"#ffffff","on-tertiary-container":"#ffede6","on-surface-variant":"#434655","secondary-fixed":"#d5e3fd","error":"#ba1a1a","surface-container-lowest":"#ffffff","inverse-primary":"#b4c5ff","surface-container-high":"#dce9ff","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#003ea8","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#b9c7e0","on-primary-fixed":"#00174b","surface-bright":"#f8f9ff","on-primary-container":"#eeefff","primary-container":"#2563eb","on-secondary-container":"#57657b","secondary-container":"#d5e3fd","on-error-container":"#93000a","on-secondary-fixed":"#0d1c2f","inverse-surface":"#213145","on-tertiary-fixed-variant":"#7d2d00","surface-container-low":"#eff4ff","on-primary":"#ffffff","surface-variant":"#d3e4fe","surface-container":"#e5eeff","primary-fixed":"#dbe1ff","secondary":"#515f74","error-container":"#ffdad6","on-background":"#0b1c30","background":"#f8f9ff","surface-dim":"#cbdbf5","on-secondary-fixed-variant":"#3a485c","outline":"#737686","surface-tint":"#0053db","tertiary-container":"#bc4800","on-error":"#ffffff","primary":"#004ac6","primary-fixed-dim":"#b4c5ff","tertiary-fixed":"#ffdbcd"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-xl":"2.5rem","margin":"2rem","margin-mobile":"1rem","space-sm":"0.5rem"},"fontFamily":{"caption":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"headline-xl":["Inter"],"body-sm":["Inter"],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"]},"fontSize":{"caption":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"500"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col justify-center"><main class="w-full bg-surface"><div class="flex flex-col w-full">
+<div class="w-full flex items-center justify-center py-space-xl px-space-md sm:px-margin">
+<div class="w-full max-w-[460px] bg-surface-container-lowest rounded-xl shadow-sm p-space-lg sm:p-space-xl flex flex-col gap-space-lg relative overflow-hidden">
+<!-- Subtle top brand accent line -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-container to-secondary-container"></div>
+<!-- Header Section -->
+<div class="flex flex-col gap-space-xs text-left">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-primary tracking-widest uppercase">Acesso Seguro</span>
+<span class="text-caption font-caption text-on-surface-variant">Etapa 01/01</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Criar Conta</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Preencha as informações para começar.</p>
+</div>
+<!-- Registration Form -->
+<form class="flex flex-col gap-space-md" id="signup-form" onsubmit="event.preventDefault(); validateForm();">
+<!-- Field 1: Full Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="fullName">Nome Completo</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px] pointer-events-none">person</span>
+<input class="w-full h-[38px] pl-10 pr-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="fullName" name="fullName" placeholder="Ex: João Silva Prado" required="" type="text">
+</div>
+</div>
+<!-- Field 2: E-mail -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="email">E-mail</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px] pointer-events-none">mail</span>
+<input class="w-full h-[38px] pl-10 pr-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="email" name="email" placeholder="seu.email@exemplo.com" required="" type="email">
+</div>
+</div>
+<!-- Field 3: Password + Strength Indicator -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="password">Senha</label>
+<span class="font-caption text-caption text-outline" id="strength-label">Mínimo 8 caracteres</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px] pointer-events-none">lock</span>
+<input class="w-full h-[38px] pl-10 pr-10 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="password" name="password" oninput="checkPasswordStrength(this.value)" placeholder="••••••••••••" required="" type="password">
+<button class="absolute right-3 text-outline hover:text-on-surface focus:outline-none flex items-center justify-center p-0.5 rounded cursor-pointer" onclick="togglePasswordVisibility('password', this)" title="Alternar visibilidade" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+<!-- Discrete Password Strength Meter -->
+<div class="grid grid-cols-4 gap-1.5 mt-1 h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-transparent transition-colors duration-200" id="bar-1"></div>
+<div class="h-full bg-transparent transition-colors duration-200" id="bar-2"></div>
+<div class="h-full bg-transparent transition-colors duration-200" id="bar-3"></div>
+<div class="h-full bg-transparent transition-colors duration-200" id="bar-4"></div>
+</div>
+</div>
+<!-- Confirm Password -->
+
+<!-- Primary Action Button -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<button class="w-full h-[40px] bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-primary-container focus:ring-2 focus:ring-primary-fixed focus:outline-none transition-colors duration-150 flex items-center justify-center gap-space-xs cursor-pointer" type="submit">
+<span>Cadastrar</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Footer Info and Login Link -->
+<div class="flex flex-col items-center gap-space-xs pt-space-xs border-t-0 bg-surface-container-low p-space-sm rounded-lg text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Já tem uma conta?
+          <a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors ml-1 inline-flex items-center" href="#">
+            Fazer login
+          </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility(fieldId, triggerBtn) {
+    const input = document.getElementById(fieldId);
+    const icon = triggerBtn.querySelector('.material-symbols-outlined');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function checkPasswordStrength(val) {
+    const bars = [
+      document.getElementById('bar-1'),
+      document.getElementById('bar-2'),
+      document.getElementById('bar-3'),
+      document.getElementById('bar-4')
+    ];
+    const label = document.getElementById('strength-label');
+    
+    let score = 0;
+    if (val.length >= 8) score++;
+    if (/[A-Z]/.test(val)) score++;
+    if (/[0-9]/.test(val)) score++;
+    if (/[^A-Za-z0-9]/.test(val)) score++;
+
+    bars.forEach(bar => {
+      bar.className = 'h-full bg-transparent transition-colors duration-200';
+    });
+
+    if (!val) {
+      label.textContent = 'Mínimo 8 caracteres';
+      label.className = 'font-caption text-caption text-outline';
+      return;
+    }
+
+    if (score === 1) {
+      bars[0].className = 'h-full bg-error transition-colors duration-200';
+      label.textContent = 'Senha fraca';
+      label.className = 'font-caption text-caption text-error';
+    } else if (score === 2) {
+      bars[0].className = 'h-full bg-tertiary transition-colors duration-200';
+      bars[1].className = 'h-full bg-tertiary transition-colors duration-200';
+      label.textContent = 'Senha média';
+      label.className = 'font-caption text-caption text-tertiary';
+    } else if (score >= 3) {
+      bars[0].className = 'h-full bg-primary transition-colors duration-200';
+      bars[1].className = 'h-full bg-primary transition-colors duration-200';
+      bars[2].className = 'h-full bg-primary transition-colors duration-200';
+      if (score === 4) {
+        bars[3].className = 'h-full bg-primary transition-colors duration-200';
+        label.textContent = 'Senha forte';
+      } else {
+        label.textContent = 'Senha segura';
+      }
+      label.className = 'font-caption text-caption text-primary';
+    }
+
+    checkPasswordMatch();
+  }
+
+  function checkPasswordMatch() {
+    const pwd = document.getElementById('password').value;
+    const confirmPwd = document.getElementById('confirmPassword').value;
+    const hint = document.getElementById('match-hint');
+
+    if (confirmPwd && pwd !== confirmPwd) {
+      hint.classList.remove('hidden');
+    } else {
+      hint.classList.add('hidden');
+    }
+  }
+
+  function validateForm() {
+    const pwd = document.getElementById('password').value;
+    const confirmPwd = document.getElementById('confirmPassword').value;
+    if (pwd !== confirmPwd) {
+      alert('As senhas digitadas não conferem.');
+      return;
+    }
+    alert('Cadastro validado com sucesso!');
+  }
+</script></main>
+
+</body></html>
